@@ -1,0 +1,240 @@
+/* ========================================
+  Global Styles
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #41474d;
+}
+
+
+/* ========================================
+  App Layout
+======================================== */
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+
+/* ========================================
+  Chat Container
+======================================== */
+
+.chat-container {
+  width: 100%;
+  max-width: 950px;
+  height: 545px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgb(46, 45, 45);
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   Chat Header
+======================================== */
+
+.chat-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.chat-header span {
+  display: inline-block;
+  margin-top: 5px;
+
+  font-size: 13px;
+  color: #16a34a;
+}
+
+
+/* ========================================
+   Messages Area
+======================================== */
+
+.messages-container {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+
+/* ========================================
+   Welcome Message
+======================================== */
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  text-align: center;
+}
+
+.welcome-message h2 {
+  margin: 15px 0 0;
+
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.welcome-message p {
+  font-size: 17px;
+  color: #b9b0b0;
+}
+
+
+/* Welcome Image */
+
+.welcome-image {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* ========================================
+   Message Rows
+======================================== */
+
+.message-row {
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.ai-row {
+  justify-content: flex-start;
+}
+
+.user-row {
+  justify-content: flex-end;
+}
+
+
+/* ========================================
+   Message Bubble
+======================================== */
+
+.message {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 14px;
+}
+
+.message-sender {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  opacity: 0.7;
+}
+
+.message p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   AI Message
+======================================== */
+
+.ai-message {
+  background: #f1f3f5;
+  color: #000000;
+}
+
+
+/* ========================================
+   User Message
+======================================== */
+
+.user-message {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+
+/* ========================================
+   Chat Input
+======================================== */
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+
+  padding: 18px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+
+/* Input Field */
+
+.chat-input input {
+  flex: 1;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+.chat-input input:focus {
+  border-color: #2563eb;
+}
+
+
+/* Send Button */
+
+.chat-input button {
+  padding: 0 22px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background: #1d4ed8;
+}
+
