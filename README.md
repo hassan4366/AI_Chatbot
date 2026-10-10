@@ -339,10 +339,10 @@ The current implementation uses local JSON files for chunk and embedding storage
 ## Current Limitations
 
 - Local JSON storage is not designed for large-scale concurrent workloads.
-- PDF extraction quality depends on the document format; scanned PDFs may require OCR.
+- PDF extraction quality dea may require additional implementation.
+- Authentication, access control, and production deplopends on the document format; scanned PDFs may require OCR.
 - Retrieval quality depends on chunking, embeddings, and similarity ranking.
-- Source citations and document-level metadata may require additional implementation.
-- Authentication, access control, and production deployment are future improvements.
+- Source citations and document-level metadatyment are future improvements.
 
 ## Future Improvements
 
@@ -357,12 +357,6 @@ The current implementation uses local JSON files for chunk and embedding storage
 - Improve upload validation and error handling.
 - Deploy the application to a production environment.
 
-## Author
-
-**Hassan Hammam**
-
-Computer and Information Student  
-Software Development | Frontend React | AI Applications
 
 ## Project Status
 
