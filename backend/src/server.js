@@ -2,14 +2,19 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
-const chatRoutes = require("./routes/chat.routes");
+const chatRoutes = require("./ROUTES/chat.routes");
+const documentRoutes = require("./ROUTES/document.routes");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
+// Existing chat endpoint.
 app.use("/api/chat", chatRoutes);
+
+// New PDF upload endpoint.
+app.use("/api/documents", documentRoutes);
 
 app.get("/", (req, res) => {
   res.json({

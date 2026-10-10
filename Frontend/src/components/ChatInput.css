@@ -1,0 +1,255 @@
+
+/* Composer Wrapper */
+.composer {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 16px 20px 12px;
+  border-top: 1px solid #2c2d34;
+  background: #1b1c21;
+}
+
+/* Main Input Form */
+.chat-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #3a3b45;
+  border-radius: 17px;
+  background: #24252c;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chat-input:focus-within {
+  border-color: #8170f5;
+  box-shadow: 0 0 0 3px #8170f51a;
+}
+
+/* Hide Native File Input */
+.file-input-hidden {
+  display: none;
+}
+
+/* Attach Button */
+.attach-button {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid #41414d;
+  border-radius: 12px;
+  background: #30313a;
+  color: #e4e0ff;
+  font-size: 27px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.attach-button:hover {
+  background: #3a374d;
+}
+
+.attach-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Message Input */
+.message-input {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  padding: 12px 4px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #f4f4f5;
+  font-size: 14px;
+}
+
+.message-input::placeholder {
+  color: #858591;
+}
+
+/* Send Button */
+.send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 0 17px;
+  border: none;
+  border-radius: 12px;
+  background: #7561f6;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.send-button:hover:not(:disabled) {
+  background: #6652e9;
+}
+
+.send-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.send-button span:last-child {
+  font-size: 18px;
+}
+
+/* Selected PDF Card */
+.selected-file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid #3a354f;
+  border-radius: 12px;
+  background: #24232d;
+}
+
+.file-details,
+.file-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.file-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #443047;
+  color: #f0a5bd;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.file-name {
+  max-width: 320px;
+  overflow: hidden;
+  color: #eeeeF4;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-label {
+  color: #9999a8;
+  font-size: 11px;
+}
+
+.upload-file-button {
+  padding: 9px 13px;
+  border: none;
+  border-radius: 9px;
+  background: #7561f6;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.upload-file-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.remove-file-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #42424d;
+  border-radius: 8px;
+  background: transparent;
+  color: #bdbdca;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.remove-file-button:hover {
+  background: #38313a;
+}
+
+.remove-file-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Upload Feedback */
+.upload-status {
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.upload-status.info {
+  color: #b7adff;
+}
+
+.upload-status.success {
+  color: #6edca5;
+}
+
+.upload-status.error {
+  color: #ff8d9a;
+}
+
+/* Footer Hint */
+.composer-hint {
+  margin: 10px 0 0;
+  color: #777784;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .composer {
+    padding: 12px 10px;
+  }
+
+  .chat-input {
+    gap: 7px;
+    padding: 6px;
+    border-radius: 14px;
+  }
+
+  .attach-button {
+    width: 37px;
+    height: 37px;
+  }
+
+  .message-input {
+    font-size: 13px;
+  }
+
+  .send-button {
+    min-height: 38px;
+    gap: 5px;
+    padding: 0 10px;
+  }
+
+  .file-name {
+    max-width: 150px;
+  }
+}

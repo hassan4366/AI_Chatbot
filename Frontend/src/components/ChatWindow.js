@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "./Chatwindow.css";
 import Message from "./Message";
 import ChatInput from "./ChatInput";
 

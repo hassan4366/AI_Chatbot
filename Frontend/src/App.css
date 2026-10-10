@@ -1,0 +1,242 @@
+/* ========================================
+   Global Styles
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #f4f4f5;
+  background: #141519;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #141519;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+/* ========================================
+   Main App Layout
+======================================== */
+
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: #141519;
+}
+
+/* ========================================
+   Sidebar
+======================================== */
+
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 16px 18px;
+  background: #1b1c21;
+  border-right: 1px solid #2c2d34;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 8px;
+  margin-bottom: 32px;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #8b7cff, #6250e8);
+  color: white;
+  font-size: 20px;
+}
+
+.new-chat-button {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #393943;
+  border-radius: 10px;
+  background: #26272e;
+  color: #f4f4f5;
+  text-align: left;
+  cursor: pointer;
+}
+
+.new-chat-button:hover {
+  background: #30313a;
+}
+
+.new-chat-button span {
+  margin-right: 9px;
+  font-size: 18px;
+}
+
+.sidebar-section {
+  margin-top: 36px;
+}
+
+.sidebar-label {
+  padding: 0 10px;
+  color: #858591;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 7px;
+  padding: 12px 10px;
+  border-radius: 9px;
+  color: #b6b6c2;
+  font-size: 14px;
+}
+
+.sidebar-item span {
+  font-size: 17px;
+}
+
+.sidebar-item.active {
+  background: #302b4a;
+  color: #c5bcff;
+}
+
+.sidebar-bottom {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding: 14px 9px 0;
+  border-top: 1px solid #303039;
+  color: #a1a1ad;
+  font-size: 12px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #38cf8a;
+  box-shadow: 0 0 9px #38cf8a44;
+}
+
+/* ========================================
+   Main Panel
+======================================== */
+
+.main-panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 82px;
+  padding: 16px 32px;
+  border-bottom: 1px solid #292a31;
+}
+
+.topbar h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.topbar p {
+  margin: 5px 0 0;
+  color: #93939f;
+  font-size: 13px;
+}
+
+.topbar-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 12px;
+  border: 1px solid #303a35;
+  border-radius: 20px;
+  background: #202722;
+  color: #8ce5b6;
+  font-size: 12px;
+}
+
+/* ========================================
+   Workspace
+======================================== */
+
+.workspace {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 28px 28px;
+}
+
+/* ========================================
+   Responsive Layout
+======================================== */
+
+@media (max-width: 760px) {
+  .sidebar {
+    width: 68px;
+    align-items: center;
+    padding: 20px 8px;
+  }
+
+  .brand {
+    padding: 0;
+    margin-bottom: 28px;
+  }
+
+  .brand > span,
+  .sidebar-section,
+  .sidebar-bottom,
+  .new-chat-button {
+    display: none;
+  }
+
+  .topbar {
+    min-height: 72px;
+    padding: 14px 16px;
+  }
+
+  .workspace {
+    padding: 14px 12px 20px;
+  }
+}
